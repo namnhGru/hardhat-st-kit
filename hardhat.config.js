@@ -16,7 +16,10 @@ require("./tasks/price-consumer")
 require("./tasks/random-number-consumer")
 require("./tasks/api-consumer")
 require("./tasks/keepers")
+require("./tasks/number")
+require("./tasks/set-number")
 require("@appliedblockchain/chainlink-plugins-fund-link")
+require('solidity-coverage')
 
 require('dotenv').config()
 
@@ -35,9 +38,9 @@ module.exports = {
     networks: {
         hardhat: {
             // // If you want to do some forking, uncomment this
-            // forking: {
-            //   url: MAINNET_RPC_URL
-            // }
+            forking: {
+                url: MAINNET_RPC_URL,
+            }
         },
         localhost: {
         },
